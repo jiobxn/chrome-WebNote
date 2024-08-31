@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Note - 记事本</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .close-btn {
+      position: absolute;
+      top: -5px;
+      left: 10px;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 50%;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      width: 25px;
+      height: 25px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      margin-left: 40px; /* 确保标题不会与关闭按钮重叠 */
+      margin-bottom: 10px; /* 增加标题和文本框之间的间距 */
+    }
+  </style>
+</head>
+<body>
+  <button class="close-btn" id="closeSnippet">&times;</button>
+  <div class="header">
+    <h3 style="margin: 0;">Web Note - 记事本</h3>
+  </div>
+  <textarea id="snippet" placeholder="Paste or type your snippet here..."></textarea>
+  <button id="copySnippet">Copy Snippet</button>
+  <p id="status" style="margin: 0;"></p>
+  <script src="popup.js"></script>
+</body>
+</html>
